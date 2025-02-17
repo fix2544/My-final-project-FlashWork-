@@ -1,0 +1,149 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline; /* ปรับให้ขึ้นไปอยู่ด้านบนสุด */
+    height: 100vh;
+    margin: 0;
+    padding-top: 30px; /* ให้มีระยะห่างจากด้านบน */
+}
+
+main.form-signin {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* ปรับ padding ให้น้อยลง */
+    width: 100%;
+    max-width: 320px; /* ลดขนาดความกว้างฟอร์ม */
+}
+
+main .form-floating {
+    margin-bottom: 15px; /* ลดช่องว่างระหว่างฟอร์ม */
+}
+
+main img {
+    margin-bottom: 20px; /* ลดระยะห่างระหว่างโลโก้กับฟอร์ม */
+}
+
+.btn-primary {
+    background-color: #0062cc;
+    border-color: #0062cc;
+}
+
+.btn-primary:hover {
+    background-color: #004c99;
+    border-color: #004c99;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px; /* ลดขนาด padding */
+    font-size: 1rem;
+    height: auto;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+.messageDiv {
+    font-size: 1.1rem;
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+
+
+/* กำหนดสไตล์สำหรับโพสต์ */
+.post {
+    background-color: #fff; /* พื้นหลังสีขาว */
+    border-radius: 10px; /* มุมโค้ง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาบางๆ เพื่อให้ดูนูน */
+    padding: 20px; /* การเว้นระยะขอบ */
+    margin-bottom: 20px; /* ระยะห่างระหว่างโพสต์ */
+    transition: transform 0.3s ease-in-out; /* การเคลื่อนไหวเมื่อ hover */
+}
+
+/* เมื่อ hover โพสต์จะยกตัวขึ้น */
+.post:hover {
+    transform: translateY(-5px);
+}
+
+/* ชื่อผู้ใช้ */
+.post p strong {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* ข้อความโพสต์ */
+.post p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* ข้อความเวลาโพสต์ */
+.post p span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* การเชื่อมโยงสำหรับติดต่อ */
+.post a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+/* ปุ่มแก้ไขและลบ */
+.post button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ฟอร์มโพสต์ใหม่ */
+.form-signin {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-signin h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.form-signin .form-floating {
+    margin-bottom: 15px;
+}
+
+.form-signin .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-signin .btn:hover {
+    background-color: #0056b3;
+}

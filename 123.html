@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" src="userProfile.js"></script>
+    <title>123test</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/feature.css">
+     <script type="module" src="freelanceinfo.js"></script>
+     <script type="module" src="hireform.js"></script>
+
+    
+</head>
+<body>
+
+  
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img src="img/logo-dark.png" width="102"ight="105">
+              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"></svg>
+            </a>
+          </div>
+
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="seepost.html" class="nav-link active" aria-current="page">Job Board</a></li>
+          <a href="hire.html" title="Job" class="icon-link">
+            <i class="fa-regular fa-message"></i> 
+          </a> 
+          </ul> 
+
+          <div class="col-md-3 text-end" id="user-info-container">
+    <div>Email: <span id="loggeduseremail"></span></div>
+    <button type="button" class="btn btn-primary" id="logOut">Logout</button>
+</div>
+
+
+
+<body>
+  <div class="container mt-5"> 
+    <!-- ปุ่ม Edit Profile -->
+    <button id="editProfileBtn" class="btn btn-outline-primary">
+      <i class="fas fa-edit"></i> Edit Profile
+    </button>
+    
+    <button class="btn btn-outline-primary">
+    <a href="updatestatus.html" class="nav-link active" >Status Update</a>
+    </button>
+   
+
+    <!-- ฟอร์มซ่อนอยู่ในตอนแรก -->
+    <form id="userProfileForm" class="mt-3" style="display: none;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="job" class="form-label">Choose Job</label>
+        <select class="form-select" id="job" required>
+          <option value="" selected>Choose</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Logo Design">Logo Design</option>
+          <option value="Video Editor">Video Editor</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="profilePictureUrl" class="form-label">Profile Picture URL</label>
+        <input type="url" class="form-control" id="profilePictureUrl" placeholder="https://example.com/profile.jpg" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="jobLink" class="form-label">Work Profile Link</label>
+        <input type="url" class="form-control" id="jobLink" placeholder="https://example.com" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="jobLink1" class="form-label">Facebook</label>
+        <input type="url" class="form-control" id="jobLink1" placeholder="Facebook Profile Link">
+      </div>
+
+      <div class="mb-3">
+        <label for="jobLink2" class="form-label">Instagram</label>
+        <input type="url" class="form-control" id="jobLink2" placeholder="Instagram Profile Link">
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <textarea class="form-control" id="price" rows="1" placeholder="Price (e.g., 1,000-2,500 THB)" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" placeholder="Describe yourself and your work style" required></textarea>
+      </div>
+
+      <!-- เพิ่มฟิลด์สกิล -->
+      <div class="mb-3" id="skillsSection">
+        <label for="skills" class="form-label">Skills</label>
+        <div id="skillsContainer">
+          <!-- ฟิลด์สกิลจะเพิ่มที่นี่ -->
+        </div>
+        <button type="button" class="btn btn-link" id="addSkillBtn">+ Add Skill</button>
+      </div>
+
+      <button type="submit" class="btn btn-success">Save Changes</button>
+    </form>
+  </div>
+
+
+  
+    
+  <script>
+    // ให้ปุ่ม Edit Profile ใช้เปิด/ปิดการแสดงฟอร์ม
+    document.getElementById("editProfileBtn").addEventListener("click", function () {
+      const form = document.getElementById("userProfileForm");
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    });
+  </script>
+
+
+
+<style>
+  body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+  }
+  .card {
+      border-radius: 15px;
+      overflow: hidden;
+  }
+  .card-header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+  }
+  .btn-custom {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 10px;
+      transition: all 0.3s;
+  }
+  .btn-custom:hover {
+      transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card shadow-lg" style="max-width: 500px; width: 100%;">
+      <div class="card-header bg-success text-white">
+          Employment details
+      </div>
+      <div class="card-body p-4">
+          <p><strong>Work name:</strong> <span id="resultProjectName"></span></p>
+          <p><strong>Job Description:</strong> <span id="resultProjectDescription"></span></p>
+          <p><strong>budget:</strong> <span id="resultBudget"></span> THB</p>
+          <p><strong>Time period:</strong> <span id="resultTimeline"></span></p>
+          <p><strong>Customer contact Information(Ex Facebook, Phone number or etc.):</strong> <span id="resultClientInfo"></span></p>
+          <div class="mt-4">
+              <button id="notAcceptBtn" class="btn btn-danger btn-custom">Not accept</button>
+              <button id="AcceptBtn" class="btn btn-primary btn-custom mt-2">Accept</button>
+          </div>
+          <p id="acceptMessage" class="text-success mt-3 d-none">Employment information accepted</p>
+      </div>
+  </div>
+</div>
+
+</body>
+  
+</body>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

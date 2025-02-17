@@ -1,0 +1,192 @@
+
+  
+  
+  
+  
+  /* เพิ่มกรอบให้แต่ละ freelancer */
+  
+  .freelancer {
+    width: 60%; /* กำหนดให้กว้างแค่ 60% ของพื้นที่ */
+    max-width: 500px; /* จำกัดความกว้างไม่ให้เกิน 500px */
+    border: 2px solid #ccc;
+    border-radius: 20px; /* ลดขอบโค้งให้น้อยลง */
+    padding: 20px;
+    margin: 20px auto; /* ตั้งค่า auto เพื่อให้กรอบอยู่กึ่งกลาง */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  
+  .freelancer h3 {
+    font-size: 24px;                 /* ขนาดตัวอักษรของชื่อ */
+    color: #333;                     /* สีตัวอักษร */
+    margin-bottom: 10px;             /* ระยะห่างด้านล่างของชื่อ */
+  }
+  
+  .freelancer p {
+    font-size: 16px;                 /* ขนาดตัวอักษร */
+    color: #555;                     /* สีตัวอักษร */
+    margin-bottom: 10px;             /* ระยะห่างด้านล่าง */
+  }
+  
+  .freelancer a {
+    color: #007bff;                  /* สีของลิงค์ */
+    text-decoration: none;           /* เอาขีดเส้นใต้ */
+    font-weight: bold;               /* ทำตัวหนา */
+  }
+  
+  .freelancer a i {
+    margin-right: 8px;               /* ระยะห่างระหว่างไอคอนและข้อความ */
+  }
+  
+  .freelancer a:hover {
+    color: #0056b3;                  /* สีลิงค์เมื่อ hover */
+    text-decoration: underline;      /* เพิ่มขีดเส้นใต้เมื่อ hover */
+  }
+  
+  /* เอฟเฟ็กต์เมื่อ hover มีกำลังเติบโตและเงา */
+  .freelancer:hover {
+    transform: translateY(-10px);    /* เลื่อนขึ้นเล็กน้อย */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+  }
+  
+  .link-icons {
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่างกรอบ */
+  }
+  
+  
+  
+  
+  /* กรอบใหญ่ที่ครอบคลุมทุกไอคอน */
+  .icon-wrapper {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งไอคอนให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดตำแหน่งไอคอนให้อยู่ตรงกลางแนวตั้ง */
+    gap: 0.5px; /* ระยะห่างระหว่างไอคอน */
+    width: 225px; /* ความกว้างของกรอบ */
+    height: 60px; /* ความสูงของกรอบ */
+    border: 1px solid #ffffff; /* กรอบใหญ่ */
+    border-radius: 60px; /* มุมโค้งของกรอบ */
+    background-color: #f9f9f9; /* สีพื้นหลังกรอบ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาของกรอบ */
+    box-sizing: border-box; /* รวม border ในขนาดของกรอบ */
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างกรอบ Icon-wrapper กับสิ่งอื่นๆ */
+  }
+  
+  /* สไตล์สำหรับไอคอน */
+  .icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    color: #1100ff; /* สีของไอคอน */
+    font-size: 20px; /* ขนาดไอคอน */
+    transition: all 0.3s ease; /* เพิ่มเอฟเฟกต์ */
+  }
+  
+  .icon-link:hover {
+  
+    color: white; /* เปลี่ยนสีไอคอนเมื่อ hover */
+  }
+  
+  
+
+  .freelancer {
+    font-family: 'Roboto', sans-serif; /* ตัวอย่างฟอนต์ */
+    font-size: 16px;
+    color: #333; /* เปลี่ยนสีข้อความ */
+}
+
+.freelancer h3 {
+    font-family: 'Roboto', sans-serif; /* ฟอนต์สำหรับหัวเรื่อง */
+    font-size: 20px;
+    color: #007BFF; /* สีหัวข้อ */
+}
+
+.freelancer p {
+    font-family: 'Roboto', serif; /* ฟอนต์สำหรับข้อความทั่วไป */
+    font-size: 14px;
+    color: #555;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ปรับสไตล์ของ Progress Bar */
+.skills-container {
+  margin-top: 10px;
+  max-width: 250px; /* จำกัดความกว้างของส่วนสกิล */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  flex-grow: 1;
+  height: 6px;  /* ลดความหนา */
+  max-width: 120px; /* ปรับให้สั้นลง */
+  background: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.5s ease-in-out;
+  border-radius: 3px;
+}
+
+/* ปรับขนาดตัวหนังสือให้ดูดี */
+.skill span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* ปรับปุ่มให้มินิมอล */
+.toggle-description {
+    background-color: #007BFF; /* พื้นหลังสีฟ้า */
+    color: white; /* สีฟอนต์ขาว */
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px; /* ทำให้ปุ่มเป็นวงรี */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างกรอบ Icon-wrapper กับสิ่งอื่นๆ */
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.toggle-description:hover {
+    background-color: #0056b3; /* สีเข้มขึ้นเมื่อโฮเวอร์ */
+}
+
+/* เมื่อกดปุ่ม */
+.toggle-description:active {
+    transform: scale(0.95);
+}
+
+/* ปรับ Description ให้ดูสวยขึ้น */
+.description-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    display: none;
+}
+
+

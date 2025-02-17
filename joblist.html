@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joblist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/feature.css">
+    <link rel="stylesheet" href="css/product.css">
+
+    <script type="module" src="login.js"></script>
+</head>
+<body>
+  <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="img/logo-dark.png" width="102" height="105">
+            <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+        </div>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="indexpost.html" class="nav-link active" aria-current="page">Job Post</a></li>
+          <li class="nav-item"><a href="seepost.html" class="nav-link" aria-current="page">Job Board</a></li>
+          <li class="nav-item"><a href="apply.html" class="nav-link">Apply to be a freelancer</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end" id="user-info-container">
+
+          <div>First Name: <span id="loggedusername"></span></div>
+          <div>Email: <span id="loggeduseremail"></span></div>
+
+          <button type="button" class="btn btn-primary" id="logout">Logout</button>
+        </div>
+      </header>
+    </div>
+    <div>
+
+      <div style="text-align: center; font-weight: bold; font-size: 50px;">
+        <h1><strong>Creators who get your style</strong> </h1>
+      </div>
+      
+      
+      <div class="button-container">
+        <a href="graphicdesign.html" class="custom-btn" data-images='["img/graphic1.jpg", "img/graphic2.jpg", "img/graphic3.jpg"]'>
+            Graphic Design
+        </a>
+        <a href="logodesign.html" class="custom-btn" data-images='["img/Logopic1.jpg", "img/Logopic2.jpg", "img/Logopic3.jpg"]'>
+            Logo Design
+        </a>
+        <a href="vdoedit.html" class="custom-btn" data-images='["img/vdo1.jpg", "img/vdo2.jpg", "img/vdo3.jpg"]'>
+            VDO Editor
+        </a>
+    </div>
+    
+      
+
+      
+      <!-- Heroes -->
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="pb-2 border-bottom">Find Professional Freelancers Easily in Just a Few Clicks</h1>
+            <p class="lead">Whether you're looking for experts in design, graphics, programming, online marketing, or any other service, this is the go-to platform for connecting with top-level freelancers who can meet all your needs. With a simple and fast search process, you can select freelancers whose skills match your requirements, check their work history, reviews from previous clients, and choose the right person for your project effortlessly.</p>
+          </div>
+        </div>
+      </div>
+     <!-- End Heroes -->
+  
+<!-- product -->
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"  >
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-3 fw-bold">Logo Design</h1>
+    <h3 class="fw-normal text-muted mb-3">Build anything you want with us</h3>
+    <div class="d-flex gap-3 justify-content-center lead fw-normal">
+      <a class="icon-link" href="logodesign.html">
+        See more
+        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+      </a>
+    </div>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block" style="background-image: url(img/logoD1.png);" ></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block" style="background-image: url(img/logoD2.png);"></div>
+</div>
+<!-- end product -->
+
+
+ 
+    <!-- footers -->
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        </footer>
+      </div>
+      <!-- End footers -->
+
+  
+
+     <!-- รูปสลับไปมาและดึงคลิปจากยท. -->
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      const buttons = document.querySelectorAll(".custom-btn");
+  
+      buttons.forEach(button => {
+          const images = JSON.parse(button.getAttribute("data-images"));
+          let index = 0;
+  
+          function changeBackground() {
+              button.style.backgroundImage = `url(${images[index]})`;
+              index = (index + 1) % images.length;
+          }
+  
+          changeBackground();
+          setInterval(changeBackground, 3000);
+      });
+  });
+
+
+  </script>
+    
+    <script src="js/bootstrap.min.js" ></script>
+    
+</body>
+</html>

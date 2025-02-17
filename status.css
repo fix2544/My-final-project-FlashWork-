@@ -1,0 +1,42 @@
+  /* CSS สำหรับ Modal */
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+.modal-content img {
+    width: 100%;
+    max-width: 880px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.modal-content button#okButton {
+    background-color: #4CAF50;
+    color: white;
+}
+.modal-content button#cancelButton {
+    background-color: #f44336;
+    color: white;
+}
+.modal-content button:hover {
+    opacity: 0.9;
+}

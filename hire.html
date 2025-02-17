@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลลัพธ์การจ้างงาน</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" src="hireform.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="card shadow-lg" style="max-width: 500px; width: 100%;">
+            <div class="card-header bg-success text-white">
+                Employment details
+            </div>
+            <div class="card-body p-4">
+                <p><strong>Work name:</strong> <span id="resultProjectName"></span></p>
+                <p><strong>Job Description:</strong> <span id="resultProjectDescription"></span></p>
+                <p><strong>budget:</strong> <span id="resultBudget"></span> THB</p>
+                <p><strong>Time period:</strong> <span id="resultTimeline"></span></p>
+                <p><strong>Customer contact Information(Ex Facebook, Phone number or etc.):</strong> <span id="resultClientInfo"></span></p>
+                <div class="mt-4">
+                    <button id="notAcceptBtn" class="btn btn-danger btn-custom">Not accept</button>
+                    <button id="AcceptBtn" class="btn btn-primary btn-custom mt-2">Accept</button>
+                </div>
+                <p id="acceptMessage" class="text-success mt-3 d-none">Employment information accepted</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
